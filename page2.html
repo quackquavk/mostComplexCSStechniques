@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex CSS Techniques Project</title>
+  <style>
+    /* Set up a flex container to create a centered layout */
+    body {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      
+    }
+
+    /* Create a card with a 3D effect using box-shadow and transform */
+    .card {
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transform: perspective(1000px) rotateY(10deg);
+    }
+
+    /* Apply a gradient background to the card */
+    .card {
+      background: linear-gradient(to bottom, #66ff00, rgb(76, 113, 0));
+    }
+
+    /* Create a skewed ribbon-like effect using pseudo-elements */
+    .ribbon {
+      position: relative;
+      margin-top: -10px;
+      padding: 10px 20px;
+      background-color: #ff6b6b;
+      color: white;
+      transform: skewX(-20deg);
+      z-index: 1;
+    }
+    .ribbon:before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      border: 10px solid transparent;
+      border-top-color: #ff6b6b;
+      transform: skewX(20deg);
+    }
+
+    /* Add a text shadow to create a visual depth effect */
+    h2 {
+      font-size: 24px;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Create a button with hover effect */
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #fcff42;
+      color: rgb(230, 17, 237);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #cdcf42;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="ribbon">Featured</div>
+    <h2>Complex CSS Techniques</h2>
+    <p>This project demonstrates various advanced CSS techniques to create an appealing design.</p>
+    <button class="button">Learn More</button>
+  </div>
+</body>
+</html>
